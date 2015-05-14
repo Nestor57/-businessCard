@@ -1,0 +1,17 @@
+<div id="needs" class='highlight'  ng-controller="pageController as page">  
+<h2 class="col-lg-12">Запросы участников программы</h2>
+
+  <ul>          
+           <div ng-repeat="comments in page.comments" class='my-animation'>
+             <li class="col-lg-12" >
+                         
+             <div class='comments' id='comments-{{$index}}'> 
+<span class="glyphicon glyphicon-user"></span>
+             {{comments}}
+             </div>
+            </li>
+           
+           </div>
+        </ul> 
+
+  </div>

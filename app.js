@@ -8,7 +8,7 @@ var tabSelected;
 $urlRouterProvider.otherwise('/');
 
 $stateProvider
-  .state('home',{
+  .state('landPage',{
     url:'/',
     templateUrl:'pages/landPage.html'
   })
@@ -39,6 +39,16 @@ $stateProvider
   })
 
   .state('programs',{
+    url:'/programs',
+    templateUrl:'pages/programs.html'
+  })
+
+    .state('needs',{
+    url:'/programs',
+    templateUrl:'pages/programs.html'
+  })
+
+      .state('results',{
     url:'/programs',
     templateUrl:'pages/programs.html'
   })
@@ -84,30 +94,48 @@ $('.moreToggle').animate({opacity:'1',top:'0'},600,function(){});
 
 };
 
+app.controller('practiceCtrl', function(){
 
-  app.controller('TabController', function(){
-    this.tab = 1;
+var init = function () {
+ 
+  tabSelected=2;
+
+  if ($('.navbar').css('opacity')==0){
+
+$('.navbar').animate({opacity:'1',top:'0'},600,function(){});          
+        }
+};
+
+init();
+});
+
+app.controller('TabController', function(){
 
     this.setTab = function(newValue){
       this.tab = newValue;
       tabSelected=newValue;
-            
+
+
        if($('.navbar').height()>56){
             $(".navbar-toggle").trigger( "click" );
         }
         
-        if (newValue=='1') {setTimeout(presentHome,700);} else if ($('.navbar').css('opacity')==0){
-
-$('.navbar').animate({opacity:'1',top:'0'},600,function(){});          
-        }
-
-        if (newValue=='2'){window.scrollTo(0, 100);}
+        setTimeout(presentHome,700);
     };
 
     this.isSet = function(tabName){
 
       return this.tab === tabName;
+     
     };
+});
+
+  app.controller('landPageCtrl', function(){
+    this.tab = 1;
+    
+$('.navbar').css({opacity:'0'});
+
+
   });
 
   app.controller('GalleryController', function(){
@@ -237,14 +265,14 @@ var practic = [{
 
 
 var imageGalary=[
-{name:"1",image:"personalFoto1.jpg"},
-{name:"2",image:"personalFoto2.jpg"},
-{name:"3",image:"personalFoto3.jpg"},
-{name:"3",image:"personalFoto4.jpg"},
-{name:"3",image:"personalFoto5.jpg"},
-{name:"3",image:"personalFoto6.jpg"},
-{name:"3",image:"personalFoto7.jpg"},
-{name:"3",image:"personalFoto8.jpg"}];
+{name:"1",image:"photos/personalFoto1.jpg"},
+{name:"2",image:"photos/personalFoto2.jpg"},
+{name:"3",image:"photos/personalFoto3.jpg"},
+{name:"3",image:"photos/personalFoto4.jpg"},
+{name:"3",image:"photos/personalFoto5.jpg"},
+{name:"3",image:"photos/personalFoto6.jpg"},
+{name:"3",image:"photos/personalFoto7.jpg"},
+{name:"3",image:"photos/personalFoto8.jpg"}];
 
 
 var traningForms=["Мини-лекции","Индивидуальная работа","Опрос по кругу","Категоризация со стикерами", "Работа в парах","Трейд-шоу","Блиц-опрос","Разбор кейсов в малых группах","Ролевые игры: аквариум,тройки", "Анализ видеофрагментов", "Многозадачные подгруппы"];

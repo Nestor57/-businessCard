@@ -1,8 +1,8 @@
- <div id="home" ng-show='tab.isSet(1)' class='firstPage' ng-controller="pageController as page">
+ <div id="home" ng-init='tab.setTab(1)' class='firstPage' ng-controller="landPageCtrl as ctrl">
 
         <div class='comments' style='font-size:24px; opacity:0;' id='startWords-1'>"Диалог - это цель"</div>
          <div class='comments' style='font-size:24px; opacity:0;' id='startWords-2'>"Диалог - это действие"</div>
          <div class='comments' style='font-size:24px; opacity:0;' id='startWords-3'>"В диалоге человек становится тем, кто он есть для себя и для других"</div>
 
-         <button type="button" ng-click='tab.setTab(2)' class="moreToggle">Узнать о диалоге больше</button>
+         <span><a ui-sref="practice" ng-click='tab.setTab(2)'>Узнать о диалоге больше</a></span>
         </div>
