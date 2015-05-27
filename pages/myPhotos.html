@@ -1,0 +1,10 @@
+        <ul id="photos" class='highlight' ng-controller="GalleryController as gallery">
+          
+           <div ng-repeat="imageGalary in gallery.imageGalary" class='animate-repeat'>
+            <li class="col-lg-1 col-md-1 col-sm-1 col-xs-1" id="photoId">
+            <div class>
+             <img class="img-responsive" ng-src="{{imageGalary.image}}" />
+             </div>
+            </li>
+            </div>
+        </ul> 

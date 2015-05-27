@@ -1,0 +1,75 @@
+           <div id="practice" class='highlight' ng-controller="practiceCtrl as ctrl"> 
+
+
+           <div  class="col col-lg-6" >       
+          <div class="customBox"  id='practic-1'>    
+          <div class="boxHeader">ui-routing</div>
+<p>Routing с помощью него происходят переходы сайта без перезагрузки
+</div>
+
+       
+          <div class="customBox"  id='practic-2'>
+          <div class="boxHeader">ng-animating</div>
+<p>Переходы происходят красиво 
+
+<div ng-init="names=['Igor Minar', 'Brad Green', 'Dave Geddes', 'Naomi Black', 'Greg Weber', 'Dean Sofer', 'Wes Alvaro', 'John Scott', 'Daniel Nadasi'];">
+  <div class="well" style="margin-top: 30px; width: 200px; overflow: hidden;">
+    <form class="form-search"> 
+        <div class="input-append">
+          <input type="text" ng-model="search" class="search-query" style="width: 80px">
+          <button type="submit" class="btn">Search</button>
+        </div>
+        <ul class="nav nav-pills nav-stacked">
+          <li class="toRepeat" ng-repeat="name in names | filter:search">
+            <a href="#"> {{name}} </a>
+          </li> 
+      </ul>
+    </form>
+  </div>
+</div>
+</div>
+
+
+       
+          <div class="customBox"  id='repeatingForm' style="height:auto;">
+          <div class="boxHeader">ng-Repeating</div>
+<p>Repiting позволяет не повтооряться дважды</p>
+ <ul id="photos" class='highlight' ng-controller="GalleryController as gallery">
+          
+           <div ng-repeat="imageGalary in gallery.imageGalary" class='animate-repeat'>
+            <li class="col-lg-3 col-md-3 col-sm-3 col-xs-3" id="photoId">
+            <div class>
+             <img class="img-responsive" ng-src="{{imageGalary.image}}" />
+             </div>
+            </li>
+            </div>
+        </ul> 
+</div>
+</div>
+
+
+      <div  class="col col-lg-6" >       
+          <div class="customBox"  id='practic-4'>
+          <div class="boxHeader">Сказка с помощью two-way binding</div>
+<p>Controllers, View и Model - MVC</p> 
+<div>
+<div>Главный герой <input ng-model='mainHero'></input></div>
+<div>Что варим <input ng-model='toVarit'></input></div>
+<div>Откуда идет пар <input ng-model='fromWhere'></input></div>
+<div>Что появилось в крыше <input ng-model='something'></input></div>
+</div>
+<div>
+<p></p>
+Из кастрюли валил густой пар. Может быть для вас совсем необычно варить {{toVarit}} из засушенных грибов в лесу, но для {{mainHero}} это совсем обычное дело. На самом деле, было совсем не понятно, от чего идет больше пар: от {{fromWhere}} или от того, как {{mainHero}} глубоко вдыхает ртом свежий морозный воздух в своем спрятанном под сугробом доме. Удивительно, как столько лет дом {{mainHero}} и сам {{mainHero}} оставались незамеченными, ведь от сильного пара в крыше снежного домика появилась {{something}}, выпускающая горячие серые облака.
+</div>
+</div>
+
+
+          <div class="customBox"  id='practic-4'>
+ <div class="boxHeader">Мой Git</div>
+
+<p>Все, представленное выше, можно увидеть на моём Git - <a href="https://github.com/Nestor57/">Добро пожаловать</a> 
+</div>
+
+   </div>
+   </div>
